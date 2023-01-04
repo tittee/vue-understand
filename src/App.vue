@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <Home/> -->
     <!-- <app-user class=""></app-user>   -->
@@ -10,7 +10,7 @@
           <button @click="selectedComponent = 'appQuote'">Quote</button>
           <button @click="selectedComponent = 'appAuthor'">Author</button>
           <button @click="selectedComponent = 'appNew'">New</button>
-          <br>
+          <br />
           <p>{{ selectedComponent }}</p>
           <keep-alive>
             <component :is="selectedComponent">
@@ -21,15 +21,13 @@
             <h2 slot="title">{{ quoteTitle }}</h2>
             <p>A wonderfull quote</p>
           </app-quote> -->
+          <>sss<>
           <!-- <app-quote></app-quote>
           <app-author></app-author>
           <app-new></app-new> -->
-
         </div>
       </div>
     </div>
-    
-
   </div>
 </template>
 
@@ -37,38 +35,38 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import Home from './components/Home.vue'
 // import User from './components/users/User.vue'
-import Quote from './components/quote/Quote.vue'
-import Author from './components/quote/Author.vue'
-import New from './components/quote/New.vue'
+import Quote from "./components/quote/Quote.vue";
+import Author from "./components/quote/Author.vue";
+import New from "./components/quote/New.vue";
 
 export default {
   // name: 'app',
-  data: function(){
+  data: function () {
     return {
       quoteTitle: "The Quote??",
-      selectedComponent: 'appQuote'
-    }
+      selectedComponent: "appQuote",
+    };
   },
   components: {
     // appUser: User
     appQuote: Quote,
     appAuthor: Author,
-    appNew: New
-  },  
-}
+    appNew: New,
+  },
+};
 </script>
 
 <style scoped>
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
-.component{
+.component {
   border: 1px solid black;
   padding: 30px;
 }
